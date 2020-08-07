@@ -1,0 +1,16 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Engine</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body bgcolor="#808080">
+Possible engines: <p th:text=${engine.string}></p>
+<h1>Enter engine:</h1>
+<form th:action="@{/validate/engine}">
+    <p>Type:<input type="text" th:name="type"/></p>
+    <p>PS:<input type="text" th:name="PS"/></p>
+    <input type="submit"/>
+</form>
+</body>
+</html>

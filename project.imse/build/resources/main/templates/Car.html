@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Car</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body bgcolor="#808080">
+Possible cars: <p th:text=${car.string}></p>
+<h1>Enter car:</h1>
+<form th:action="@{/validate/car}">
+    <p>Maker:<input type="text" th:name="maker"/></p>
+    <p>Model:<input type="text" th:name="model"/></p>
+    <input type="submit"/>
+</form>
+<form th:action="@{/validate/car/mongo}">
+    <p>FOR MONGO: Maker:<input type="text" th:name="maker"/></p>
+    <p>FOR MONGO: Model:<input type="text" th:name="model"/></p>
+    <input type="submit"/>
+</form>
+</body>
+</html>

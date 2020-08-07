@@ -1,0 +1,49 @@
+version: '3'
+
+services:
+  mongo:
+    image: mongo
+    ports:
+      - 27017:27017
+  mongo-express:
+    image: mongo-express
+    ports:
+      - 8082:8081
+  main:
+    image: portainer/portainer
+    ports:
+      - "9000:9000"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    deploy:
+      placement:
+        constraints: [node.role == manager]
+
+  db:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: nikita1995
+      MYSQL_DATABASE: imse
+    ports:
+      - "3308:3306"
+  
+  admin:    
+    image: adminer   
+    depends_on:
+      - db 
+    ports:      
+      - "8081:8080"
+      
+  imseapp:
+    build:
+      dockerfile: Dockerfile
+      context: .
+    image: imseapp
+    depends_on:
+      - db
+    volumes:
+      - ./imseapp:/imseapp
+    ports:
+      - "8080:8080"
+
+   

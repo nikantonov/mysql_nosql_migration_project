@@ -1,0 +1,15 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Cabinet</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body bgcolor="#808080">
+<h1>Enter your login and password:(for example Login200 Password200)</h1>
+<form th:action="@{/validate}">
+    <p>Login:<input type="text" th:name="login"/></p>
+    <p>Password:<input type="text" th:name="password"/></p>
+    <input type="submit"/>
+</form>
+</body>
+</html>

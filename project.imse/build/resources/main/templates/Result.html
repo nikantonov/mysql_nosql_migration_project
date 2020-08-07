@@ -1,0 +1,14 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Result</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body bgcolor="#808080">
+You have rented this car: <p th:text=${result.string}></p>
+<h1>Back:</h1>
+<form method="get" action="/cabinet">
+    <button type="submit">Back</button>
+</form>
+</body>
+</html>

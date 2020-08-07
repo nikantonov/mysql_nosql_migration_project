@@ -1,0 +1,13 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Result</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body bgcolor="#808080">
+Report: <p th:text=${answer.string}></p>
+<form method="get" action="/cabinet">
+    <button type="submit">Back</button>
+</form>
+</body>
+</html>

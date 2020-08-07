@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Car</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body bgcolor="#808080">
+<h1>Enter start and end date(in format YEAR-MO-DA):</h1>
+<form th:action="@{/validate/date}">
+    <p>Start date:<input type="text" th:name="start"/></p>
+    <p>End date:<input type="text" th:name="end"/></p>
+    <input type="submit"/>
+</form>
+<form th:action="@{/validate/date/mongo}">
+    <p>FOR MONGO: Start date:<input type="text" th:name="start"/></p>
+    <p>FOR MONGO: End date:<input type="text" th:name="end"/></p>
+    <input type="submit"/>
+</form>
+</body>
+</html>

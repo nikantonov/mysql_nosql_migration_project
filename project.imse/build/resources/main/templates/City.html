@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>City</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body bgcolor="#808080">
+Possible cities: <p th:text=${city.string}></p>
+<h1>Enter city:</h1>
+<form th:action="@{/validate/city}">
+    <p>City:<input type="text" th:name="city"/></p>
+    <input type="submit"/>
+</form>
+<form th:action="@{/validate/city/mongo}">
+    <p>FOR MONGO: City:<input type="text" th:name="city"/></p>
+    <input type="submit"/>
+</form>
+</body>
+</html>

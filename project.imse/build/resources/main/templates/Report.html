@@ -1,0 +1,14 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Report</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body bgcolor="#808080">
+<h1>Enter country:</h1>
+<form th:action="@{/validate/country/report}">
+    <p>Country(only Germany/Austria/Spain/France/Italy:<input type="text" th:name="country"/></p>
+    <input type="submit"/>
+</form>
+</body>
+</html>
